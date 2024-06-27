@@ -1,0 +1,21 @@
+//#2- 생성자 함수
+//<객체 리터럴>
+let user={
+    name:'Mike",
+    age:30
+}
+//비슷한 객체를 여러 개 만들어야 할 때 => 생성자 함수(붕어빵틀)
+
+function User(name, age) { //첫글자는 대문자로
+    this.name = name;
+    this.age= age;
+    this.sayName=function(){
+        console.log(this.name) 
+    }
+}
+let user1 = new User('Mike',30); //sayName에서 this는 user1
+
+/** new 함수명();을 실핼하면  빈 객체를 만들고 this에 할당함(this={}
+ * 함수 본문?을 실행하며 this에 프로퍼티들을 추가. 마지막으로 this반환(return this)
+ * */
+
